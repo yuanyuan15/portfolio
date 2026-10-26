@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Yuanyuan Xu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">Yuanyuan</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="page-title">
+      <h1>Projects</h1>
+      <p>Selected work in UX research, tangible interaction and emerging technologies.</p>
+    </section>
+
+    <!--
+      每个项目是一个 <a class="card">...</a>
+      想加项目：复制一整段 card，改图片、标签、标题和描述即可
+      href 可以链接到 PDF、Behance、视频，或者以后单独做的详情页
+    -->
+    <section class="grid">
+
+      <a class="card" href="https://doi.org/10.1145/3706599.3719781" target="_blank">
+        <img class="thumb" src="images/liteco.jpg" alt="LiteCo ambient display">
+        <div class="body">
+          <div class="tags">
+            <span class="tag">Ambient Display</span>
+            <span class="tag">CHI EA '25</span>
+          </div>
+          <h3>LiteCo</h3>
+          <p>An ambient light display that supports workspace awareness and social connectedness for people working from home.</p>
+        </div>
+      </a>
+
+      <a class="card" href="https://doi.org/10.1007/978-3-031-47328-9_19" target="_blank">
+        <img class="thumb" src="images/ar-library.jpg" alt="AR materials library">
+        <div class="body">
+          <div class="tags">
+            <span class="tag">AR</span>
+            <span class="tag">Education</span>
+            <span class="tag">iLRN 2023</span>
+          </div>
+          <h3>AR Materials Library</h3>
+          <p>An augmented-reality materials library with a "four-know" learning structure for design and engineering students.</p>
+        </div>
+      </a>
+
+      <!-- 占位项目：替换成你的内容 -->
+      <a class="card" href="#">
+        <img class="thumb" src="images/project3.jpg" alt="Project 3">
+        <div class="body">
+          <div class="tags">
+            <span class="tag">Tag</span>
+            <span class="tag">2024</span>
+          </div>
+          <h3>Project Title</h3>
+          <p>One or two sentences describing the problem, your role and the outcome.</p>
+        </div>
+      </a>
+
+      <a class="card" href="#">
+        <img class="thumb" src="images/project4.jpg" alt="Project 4">
+        <div class="body">
+          <div class="tags">
+            <span class="tag">Tag</span>
+            <span class="tag">2023</span>
+          </div>
+          <h3>Project Title</h3>
+          <p>One or two sentences describing the problem, your role and the outcome.</p>
+        </div>
+      </a>
+
+    </section>
+  </main>
+
+  <footer>© 2026 Yuanyuan Xu</footer>
+
+</body>
+</html>

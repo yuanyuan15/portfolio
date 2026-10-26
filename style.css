@@ -1,0 +1,121 @@
+/* ========== 基础设置 ========== */
+:root {
+  --bg: #fafaf8;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #2f5d62;
+  --card: #ffffff;
+  --line: #e6e6e2;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ========== 导航栏 ========== */
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 64px;
+}
+.logo { font-weight: 700; font-size: 1.15rem; color: var(--text); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { color: var(--muted); font-size: 0.95rem; }
+.nav-links a.active, .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+/* ========== 首页 Hero ========== */
+.hero {
+  display: grid; grid-template-columns: 320px 1fr; gap: 56px;
+  align-items: center; padding: 80px 0 64px;
+}
+.hero img {
+  width: 100%; aspect-ratio: 2 / 3; object-fit: cover;
+  border-radius: 6px; background: var(--line);
+}
+.hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 16px; }
+.hero .intro { font-size: 1.15rem; margin-bottom: 20px; }
+.hero blockquote {
+  border-left: 3px solid var(--accent); padding-left: 16px;
+  color: var(--muted); font-style: italic; margin-bottom: 28px;
+}
+.btn {
+  display: inline-block; padding: 10px 24px; border-radius: 999px;
+  background: var(--text); color: #fff; font-size: 0.95rem;
+}
+.btn:hover { background: var(--accent); text-decoration: none; }
+
+/* ========== 通用区块 ========== */
+section.block { padding: 48px 0; border-top: 1px solid var(--line); }
+section.block h2 { font-size: 1.6rem; margin-bottom: 28px; }
+
+/* 教育经历 */
+.edu-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 24px;
+  margin-bottom: 32px;
+}
+.edu-item .date { color: var(--muted); font-size: 0.9rem; padding-top: 3px; }
+.edu-item h3 { font-size: 1.1rem; }
+.edu-item .school { color: var(--accent); margin-bottom: 6px; }
+.edu-item p { color: var(--muted); font-size: 0.95rem; }
+
+/* 论文 */
+.pub { margin-bottom: 20px; font-size: 0.95rem; }
+.pub a { word-break: break-all; }
+
+/* 联系方式 */
+.contact { display: flex; flex-wrap: wrap; gap: 48px; }
+.contact h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px; }
+
+/* ========== 项目页 ========== */
+.page-title { padding: 72px 0 40px; }
+.page-title h1 { font-size: 2.6rem; margin-bottom: 8px; }
+.page-title p { color: var(--muted); }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px; padding-bottom: 80px;
+}
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  overflow: hidden; transition: transform .2s, box-shadow .2s;
+  color: var(--text);
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.08); text-decoration: none; }
+.card .thumb { aspect-ratio: 4 / 3; background: var(--line); object-fit: cover; width: 100%; }
+.card .body { padding: 20px; }
+.card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.card .tag {
+  font-size: 0.75rem; padding: 2px 10px; border-radius: 999px;
+  background: #eef3f3; color: var(--accent);
+}
+.card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.card p { color: var(--muted); font-size: 0.92rem; }
+
+/* ========== 页脚 ========== */
+footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+/* ========== 手机适配 ========== */
+@media (max-width: 760px) {
+  .nav-links { gap: 16px; }
+  .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
+  .hero img { max-width: 260px; }
+  .hero h1 { font-size: 2.3rem; }
+  .edu-item { grid-template-columns: 1fr; gap: 4px; }
+}
